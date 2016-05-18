@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/bundle.js"></script>
+  </head>
+  <body>
+    <div ng-controller="UsersController as u">
+      {% raw %}
+      {{ u.users.length }} Users
+
+      <ul>
+        <li ng-repeat="user in u.users">
+          <dl>
+            <dt>Name</dt><dd>{{ user.name }}</dd>
+            <dt>Dept</dt><dd>{{ user.department }}</dd>
+            <input ng-model="user.name"/>
+
+            <span ng-click="u.deleteUser(user)">Delete</span>
+          </dl>
+        </li>
+      </ul>
+
+      <form name="newUser" ng-submit="u.addUser()">
+        <p><input ng-model="u.newUser.name" name="name" placeholder="name" required></p>
+        <p ng-show="newUser.name.$touched && newUser.name.$invalid">Please enter a name</p>
+
+        <p><input ng-model="u.newUser.department" name="department" placeholder="department" required></p>
+        <p ng-show="newUser.department.$touched && newUser.department.$invalid">Please enter a dept</p>
+
+        <button ng-show="u.newUser.name.length && u.newUser.department.length">
+          Add User
+        </button>
+      </form>
+
+      {% endraw %}
+    </div>
+  </body>
+</html>
