@@ -1,20 +1,23 @@
 var angular = require('angular');
-var app = angular.module('app', []);
+var app = angular.module('app', ['filters']);
 
 app.controller('UsersController', function () {
     this.newUser = {
         'name': '',
-        'department': ''
+        'department': '',
+        'salary': 10000
     };
 
     this.users = [
         {
             'name': 'Bob',
-            'department': 'IT'
+            'department': 'IT',
+            'salary': 10000
         },
         {
             'name': 'Clive',
-            'department': 'Management'
+            'department': 'Management',
+            'salary': 50000000
         }
     ];
 
@@ -23,7 +26,8 @@ app.controller('UsersController', function () {
 
         this.newUser = {
             'name': '',
-            'department': ''
+            'department': '',
+            'salary': 10000
         };
     };
 

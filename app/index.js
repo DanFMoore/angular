@@ -1,3 +1,3 @@
-//require('./directives');
-//require('./services');
-require('./controllers');
+require('./filters');
+require('./app');
+require('./ajax');
