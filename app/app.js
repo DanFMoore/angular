@@ -12,7 +12,7 @@ var angular = require('angular');
 
 /**
  * Create a module called app which uses the filters module (filters.js) as a dependency.
- * Although not used on this page, a filter from filters.js is used in the HTML template.
+ * Although not used in this file, a filter from filters.js is used in the HTML template for this page.
  * The name of the module is used in an ng-app directive in HTML. Only elements inside that element can use this module.
  *
  * @see https://docs.angularjs.org/guide/module
