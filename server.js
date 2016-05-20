@@ -52,6 +52,10 @@ app.get('/users', function(req, res) {
     res.json(returnedUsers);
 });
 
+app.get('/routes', function(req, res) {
+    res.render('routes');
+});
+
 // Additional middleware which will set headers that we need on each /api request.
 app.use(function(req, res, next) {
     // Set permissive CORS header - this allows the api routes to be used only as

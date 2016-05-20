@@ -1,3 +1,5 @@
+'use strict';
+
 var angular = require('angular');
 var filters = angular.module('filters', []);
 

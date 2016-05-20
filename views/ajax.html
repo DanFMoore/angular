@@ -18,6 +18,21 @@
     <div ng-controller="UsersController as u" ng-init="u.load()">
       {% raw %}
 
+      <form name="newUser" ng-submit="u.addUser()">
+        <p><input ng-model="u.newUser.name" name="name" placeholder="name" required></p>
+        <p ng-show="newUser.name.$touched && newUser.name.$invalid">Please enter a name</p>
+
+        <p><input ng-model="u.newUser.department" name="department" placeholder="department" required></p>
+        <p ng-show="newUser.department.$touched && newUser.department.$invalid">Please enter a dept</p>
+
+        <p><input type="number" ng-model="u.newUser.salary" name="salary" placeholder="salary" required></p>
+        <p ng-show="newUser.salary.$touched && newUser.salary.$invalid">Please enter a salary</p>
+
+        <button ng-show="u.newUser.name.length && u.newUser.department.length && u.newUser.salary">
+          Add User
+        </button>
+      </form>
+
       {{ u.users.length }} Users
 
       <ul>
@@ -34,21 +49,6 @@
       </ul>
 
       <p ng-show="u.error">An error has occurred: {{ u.error }} <span ng-click="u.error = null">Close</span></p>
-
-      <form name="newUser" ng-submit="u.addUser()">
-        <p><input ng-model="u.newUser.name" name="name" placeholder="name" required></p>
-        <p ng-show="newUser.name.$touched && newUser.name.$invalid">Please enter a name</p>
-
-        <p><input ng-model="u.newUser.department" name="department" placeholder="department" required></p>
-        <p ng-show="newUser.department.$touched && newUser.department.$invalid">Please enter a dept</p>
-
-        <p><input type="number" ng-model="u.newUser.salary" name="salary" placeholder="salary" required></p>
-        <p ng-show="newUser.salary.$touched && newUser.salary.$invalid">Please enter a salary</p>
-
-        <button ng-show="u.newUser.name.length && u.newUser.department.length && u.newUser.salary">
-          Add User
-        </button>
-      </form>
 
       <button ng-click="u.load()">Reload</button>
 

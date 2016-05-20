@@ -10,20 +10,6 @@
   <body>
     <div ng-controller="UsersController as u">
       {% raw %}
-      {{ u.users.length }} Users
-
-      <ul>
-        <li ng-repeat="user in u.users">
-          <dl>
-            <dt>Name</dt><dd>{{ user.name }}</dd>
-            <dt>Dept</dt><dd>{{ user.department | toUpperCase }}</dd>
-            <dt>Salary</dt><dd>{{ user.salary | currency:'£' }}</dd>
-            <input ng-model="user.name"/>
-
-            <span ng-click="u.deleteUser(user)">Delete</span>
-          </dl>
-        </li>
-      </ul>
 
       <form name="newUser" ng-submit="u.addUser()">
         <p><input ng-model="u.newUser.name" name="name" placeholder="name" required></p>
@@ -40,6 +26,20 @@
         </button>
       </form>
 
+      {{ u.users.length }} Users
+
+      <ul>
+        <li ng-repeat="user in u.users">
+          <dl>
+            <dt>Name</dt><dd>{{ user.name }}</dd>
+            <dt>Dept</dt><dd>{{ user.department | toUpperCase }}</dd>
+            <dt>Salary</dt><dd>{{ user.salary | currency:'£' }}</dd>
+            <input ng-model="user.name"/>
+
+            <span ng-click="u.deleteUser(user)">Delete</span>
+          </dl>
+        </li>
+      </ul>
       {% endraw %}
     </div>
   </body>
