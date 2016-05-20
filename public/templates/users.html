@@ -1,5 +1,6 @@
 <ul>
     <li ng-repeat="(i, user) in u.users">
+        <!-- Going to a separate hash fragment will run the corresponding controller as defined in the route config -->
         <a ng-href="#/users/{{ i }}">{{ user.name }}</a>
     </li>
 </ul>
