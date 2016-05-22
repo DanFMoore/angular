@@ -1,3 +1,4 @@
+<!-- @see https://docs.angularjs.org/guide/templates -->
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
@@ -9,9 +10,10 @@
   </head>
   <body>
     <div ng-controller="UsersController as u">
-      <!--This raw tag is for the node temperating engine to allow double curly braces -->
+      <!-- This raw tag is for the node templating engine to allow double curly braces -->
       {% raw %}
 
+      <!-- @see https://docs.angularjs.org/guide/forms -->
       <form name="newUser" ng-submit="u.addUser()">
         <!-- Angular will validate based on the attributes used, e.g. required -->
         <p><input ng-model="u.newUser.name" name="name" placeholder="name" required></p>
@@ -30,7 +32,8 @@
         </button>
       </form>
 
-      <!-- Double curly braces are the equivalent of echo but automatically escape HTML -->
+      <!-- Double curly braces are the equivalent of echo but automatically escape HTML
+           @see https://docs.angularjs.org/guide/interpolation -->
       {{ u.users.length }} Users
 
       <ul>
