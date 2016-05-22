@@ -16,6 +16,7 @@ var app = angular.module('ajax', ['filters']);
  * The reason the names are repeated like this in the array is that if it is minified, the names of the variables are
  * lost.
  *
+ * @see https://docs.angularjs.org/guide/di
  * @see https://docs.angularjs.org/api/ng/service/$http
  * @see https://docs.angularjs.org/api/ng/service/$q - Angular's promise library
  * @see https://docs.angularjs.org/api/ng/service/$window - just the browser's window object
