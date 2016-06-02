@@ -8,8 +8,8 @@
  * @see https://docs.angularjs.org/tutorial/step_09
  */
 
-var angular = require('angular');
-var filters = angular.module('filters', []);
+const angular = require('angular');
+const filters = angular.module('filters', []);
 
 /**
  * This is used in HTML with {{ value | toUpperCase }}.

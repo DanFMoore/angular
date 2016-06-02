@@ -10,7 +10,7 @@
  * @see https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
  */
 
-var angular = require('angular');
+const angular = require('angular');
 
 /**
  * Import the ngRoute module which contains the routing functionality.
@@ -18,7 +18,7 @@ var angular = require('angular');
  *
  * @see https://docs.angularjs.org/api/ngRoute
  */
-var routes = angular.module('routes', ['ngRoute']);
+const routes = angular.module('routes', ['ngRoute']);
 
 /**
  * Set up the routes. The urls are the hash fragments.

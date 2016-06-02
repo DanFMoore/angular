@@ -6,8 +6,8 @@
  * The HTML template used for this is /views/ajax.html and is served from /ajax. The AJAX request calls /users.
  */
 
-var angular = require('angular');
-var app = angular.module('ajax', ['filters']);
+const angular = require('angular');
+const app = angular.module('ajax', ['filters']);
 
 /**
  * $http, $q and $window are built-in angular services. They are resolved automatically by the name of the variable
@@ -103,7 +103,7 @@ app.controller('UsersController', ['UsersService', function (UsersService) {
     };
 
     this.deleteUser = function (user) {
-        var index = this.users.indexOf(user);
+        const index = this.users.indexOf(user);
         this.users.splice(index, 1);
     };
 }]);

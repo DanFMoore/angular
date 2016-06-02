@@ -8,7 +8,7 @@
  * The form has basic validation, will show error messages when text is deleted and only allow numbers for salary.
  */
 
-var angular = require('angular');
+const angular = require('angular');
 
 /**
  * Create a module called app which uses the filters module (filters.js) as a dependency.
@@ -17,7 +17,7 @@ var angular = require('angular');
  *
  * @see https://docs.angularjs.org/guide/module
  */
-var app = angular.module('app', ['filters']);
+const app = angular.module('app', ['filters']);
 
 /**
  * The name of the controller is used an ng-controller directive in HTML.
@@ -75,7 +75,7 @@ app.controller('UsersController', function () {
      * @param {Object} user
      */
     this.deleteUser = function (user) {
-        var index = this.users.indexOf(user);
+        const index = this.users.indexOf(user);
         this.users.splice(index, 1);
     };
 });

@@ -30,11 +30,6 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {},
 
-    // JSON pre-processor for the fixtures
-    jsonFixturesPreprocessor: {
-      variableName: '__json__'
-    },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
